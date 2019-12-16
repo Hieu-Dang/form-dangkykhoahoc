@@ -3,8 +3,74 @@
 <html>
 <head>
 	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css
+	">
 </head>
 <body>
+	<table>
+		<tr>
+			<td>Họ tên</td>
+			<td><input type="text" id="hoten"></td>
+		</tr>
+			<tr>
+			<td>Tên đăng nhập</td>
+			<td><input type="text" id="username"></td>
+		</tr>
+			<tr>
+			<td>Điện thoại</td>
+			<td><input type="text" id="phone"></td>
+		</tr>
+			<tr>
+			<td>Email</td>
+			<td><input type="text" id="email"></td>
+		<tr>
+			<td>Giới tính</td>
+			<td><input type="radio" value="Nam">Nam <input type="radio" value="Nữ">Nữ</td>
+		</tr>
+		<tr>
+			<td>Khóa học đăng ký</td>
+			<td><select>
+				<option>Lập trình PHP</option>
+				<option>Thiết kế đồ họa</option>
+				<option>Lập trình android</option>
+				<option>Kỹ thuật làm phim</option>
+			</select></td>
+		</tr>
+		<tr>
+			<td>Khóa học đã tham gia</td>
+			<td>
+				<input type="checkbox" value="lt">Lập trình PHP
+				<input type="checkbox" value="dh">Thiết kế đồ họa
+				<input type="checkbox" value="ad">lập trình Android
+				<input type="checkbox" value="mv">Kỹ thuật làm phim
+			</td>
+		</tr>
+		<tr>
+			<td>Ghi chú</td>
+			<td><input type="text" id="ghichu"></td>
+		</tr>
+	</table><br>
+	<input type="button" value="Đăng ký" onclick="">
 
+
+	<script type="text/javascript">
+		function Check_dky(){
+			var hoten = document.getElementById('hoten').value;
+			var username = document.getElementById('username').value;
+			var phone = document.getElementById('phone').value;
+			var email = document.getElementById('email').value;
+			
+			check_hoten = /^[a-zA-Z àáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđÀÁẠẢÃÂẦẤẬẨẪĂẰẮẶẲẴÈÉẸẺẼÊỀẾỆỂỄÌÍỊỈĨÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠÙÚỤỦŨƯỪỨỰỬỮỲÝỴỶỸĐD]{3,20}$/;
+
+			if (!check_hoten.test(hoten)) {
+				return false;
+			}
+			 alert('dang ky thanh cong :))))');
+			 return true;
+
+
+		}
+	</script>
 </body>
 </html>
